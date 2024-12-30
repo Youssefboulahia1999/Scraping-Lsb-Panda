@@ -1,95 +1,102 @@
-1exercice.py. **Jeu de mots :** 
-   - Le joueur doit deviner un mot lettre par lettre.
-   - Il a un nombre limité de chances avant que le jeu ne soit terminé.
-   - Des erreurs dans les lettres non présentes dans le mot font perdre des chances.
-   
-2exercice.py. **Manipulation des produits JSON :**
-   - Récupère des données JSON à partir d'une API externe.
-   - Transforme et imprime les données au format base64.
-   - Génére des mots de passe sécurisés et des UUID pour chaque produit.
-   
-3exercice.py. **Écriture dans un fichier CSV :**
-   - Les données des produits récupérés sont écrites dans un fichier CSV local.
+# Projet Python : Exercices Divers
+
+Ce projet contient plusieurs exercices Python qui couvrent différents concepts, tels que les jeux de mots, la manipulation de données JSON, l'écriture de fichiers CSV, ainsi que l'interaction avec des APIs externes.
+
+## Exercice 1 : Jeu de mots
+
+Le joueur doit deviner un mot lettre par lettre. Il a un nombre limité de chances avant que le jeu ne soit terminé. Des erreurs dans les lettres non présentes dans le mot feront perdre des chances. Ce jeu permet de pratiquer la gestion des entrées utilisateur et la logique conditionnelle.
+
+### Fonctionnalités :
+- Deviner un mot en plusieurs tentatives.
+- Un nombre limité d'essais avant de perdre.
+- Perdre des chances lorsque des lettres incorrectes sont proposées.
+
+---
+
+## Exercice 2 : Manipulation des produits JSON
+
+Cet exercice montre comment récupérer des données JSON à partir d'une API externe, les transformer et les imprimer au format base64. Il inclut également la génération de mots de passe sécurisés et d'UUID pour chaque produit.
+
+### Fonctionnalités :
+- Récupérer des données JSON depuis une API.
+- Convertir et imprimer les données en base64.
+- Générer des mots de passe sécurisés et des UUID uniques pour chaque produit.
+
+---
+
+## Exercice 3 : Écriture dans un fichier CSV
+
+Les données des produits récupérées sont écrites dans un fichier CSV local. Cela permet de pratiquer l'utilisation des fichiers CSV pour stocker des données structurées.
+
+### Fonctionnalités :
+- Récupérer des données.
+- Sauvegarder ces données dans un fichier CSV local.
+
+---
 
 ## Installation
 
 ### Prérequis
 
 Avant d'exécuter ce projet, assurez-vous d'avoir Python 3 installé. Vous aurez également besoin des bibliothèques suivantes :
+
 - `requests` pour interagir avec l'API JSON.
 - `uuid`, `random`, `string`, `hashlib` pour la génération de mots de passe et de hachages.
 - `pathlib` pour la gestion des chemins de fichiers.
 - `csv` pour la gestion des fichiers CSV.
 
 Vous pouvez installer ces bibliothèques via pip si elles ne sont pas déjà installées :
-
-```bash
+```
 pip install requests
+```
 
 
+## Api.py exemple d'API - API Requests et Manipulation de JSON
+
+Ce projet montre comment interagir avec différentes APIs publiques en Python, y compris la récupération de données JSON depuis une API externe et leur manipulation.
+
+Authentification avec l'API Reddit
+
+Ce projet montre comment interagir avec l'API Reddit pour récupérer les posts populaires dans le subreddit Python. Il inclut également la récupération des commentaires associés et l'extraction du post et du commentaire les plus populaires. L'authentification est effectuée en utilisant OAuth2 via un token d'accès.
+
+Fonctionnalités :
+Authentification OAuth2.
+Récupérer les posts populaires dans un subreddit.
+Extraire les commentaires associés aux posts populaires.
 
 
-#Api.py **API Requests and JSON Handling in Python**
+## Lsb.py Stéganographie avec Python
 
-Ce projet démontre l'utilisation de la bibliothèque Python `requests` pour interagir avec différentes APIs publiques, ainsi que la manipulation de données JSON. Vous y trouverez des exemples de requêtes HTTP pour récupérer des informations sur la Station Spatiale Internationale (ISS), interagir avec l'API GitHub et effectuer diverses opérations sur des données JSON.
+Ce projet utilise la stéganographie pour cacher un message secret dans une image en manipulant les bits de poids faible (LSB) des composantes RGB de chaque pixel. Vous pouvez ensuite récupérer ce message à partir de l'image.
 
-**# Auth_reddit.py Reddit API Authentication and Data Extraction**
-
-Ce projet montre comment interagir avec l'API Reddit pour récupérer des posts populaires dans le subreddit Python, récupérer des commentaires associés, et extraire le post et le commentaire les plus populaires. L'authentification est effectuée en utilisant OAuth2 via un token d'accès.
-
-## Table des Matières
-
-- [Installation](#installation)
-- [Authentification Reddit API](#authentification-reddit-api)
-- [Récupérer les posts populaires](#récupérer-les-posts-populaires)
-- [Récupérer les commentaires populaires](#récupérer-les-commentaires-populaires)
-- [Dépendances](#dépendances)
-- [Contribution](#contribution)
-
-
-
-
-
-
-# Stéganographie avec Python
-
-Ce projet permet de cacher un message secret dans une image en utilisant la technique de la stéganographie par les bits de poids faible (LSB) des composantes RGB de chaque pixel. Le message peut être récupéré à partir de l'image une fois qu'il a été caché.
-
-## Prérequis
-
+Prérequis :
 Avant de commencer, assurez-vous d'avoir installé les bibliothèques suivantes :
 
-- **Python** (version 3.x recommandée)
-- **Pillow** (bibliothèque d'image Python)
+Python (version 3.x recommandée)
+Pillow (bibliothèque pour la manipulation d'images en Python)
+Installez Pillow via pip :
+``` pip install pillow```
 
-Vous pouvez installer Pillow via pip :
+Commandes pour exécuter le code :
+Pour cacher un message dans une image :
+```` python lsb.py write <chemin_vers_l_image_en_entree> <message_secret_a_ecrire>````
 
-```bash
-pip install pillow
+Pour lire un message caché dans une image :
+``` python lsb.py read <chemin_vers_l_image_en_entree>```
 
-commande pour le code :
+## Scraping.py Web Scraping avec BeautifulSoup et Requests
 
-python lsb.py write chemin vers l'image en entree> <message secret a ecrire
-python lsb.py read chemin vers limage en entre
+Ce projet Python utilise les bibliothèques requests et BeautifulSoup pour récupérer et analyser le contenu d'une page web. Il permet d'extraire des informations comme les titres, les paragraphes, les éléments avec des identifiants ou des classes spécifiques, et d'autres contenus HTML.
 
-
-
-
-# Web Scraping avec BeautifulSoup et Requests
-
-Ce projet Python utilise les bibliothèques `requests` et `BeautifulSoup` pour récupérer et analyser le contenu d'une page web. Il permet d'extraire des informations comme les titres, les paragraphes, les éléments avec des identifiants ou des classes spécifiques, et d'autres contenus HTML.
-
-## Prérequis
-
+Prérequis :
 Avant de commencer, assurez-vous que vous avez installé les dépendances suivantes :
 
-- [Python 3.x](https://www.python.org/)
-- [requests](https://pypi.org/project/requests/) : Pour envoyer des requêtes HTTP.
-- [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) (via le package `bs4`) : Pour analyser le contenu HTML.
+Python 3.x
+requests : Pour envoyer des requêtes HTTP.
+BeautifulSoup (via bs4) : Pour analyser le contenu HTML.
+Installez les dépendances à l'aide de pip : 
+``` pip install requests beautifulsoup4```
 
-### Installation
-Installer les dépendances à l'aide de `pip` :
+Contribution
 
-   ```bash
-   pip install requests beautifulsoup4
 
