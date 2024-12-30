@@ -68,7 +68,7 @@ numbre = data['number']
 print(numbre)
 
 # scraping sur Github en API avec une clef tockens
-# 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
+# donner un token
 headers = {"Authorisation":"token jj"}
 response = requests.get("http://api.github.com/users/huandu", headers = headers)
 print(response.json())
@@ -79,7 +79,7 @@ response = requests.get("http://api.github.com/orgs/facebook", headers = headers
 print(response.json())
 
 # Pour Hello-World respot
-headers = {"Authorisation":"token ghp_EyA7eOgZrC0usVJT6U4JSCbA"}
+headers = {"Authorisation":"token dhjds"}
 response = requests.get("http://api.github.com/repos/octocat/Hello-World", headers = headers)
 print(response.json())
 
