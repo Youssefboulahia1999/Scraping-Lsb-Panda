@@ -67,5 +67,29 @@ Vous pouvez installer Pillow via pip :
 ```bash
 pip install pillow
 
+commande pour le code :
+
 python lsb.py write chemin vers l'image en entree> <message secret a ecrire
 python lsb.py read chemin vers limage en entre
+
+
+
+
+# Web Scraping avec BeautifulSoup et Requests
+
+Ce projet Python utilise les bibliothèques `requests` et `BeautifulSoup` pour récupérer et analyser le contenu d'une page web. Il permet d'extraire des informations comme les titres, les paragraphes, les éléments avec des identifiants ou des classes spécifiques, et d'autres contenus HTML.
+
+## Prérequis
+
+Avant de commencer, assurez-vous que vous avez installé les dépendances suivantes :
+
+- [Python 3.x](https://www.python.org/)
+- [requests](https://pypi.org/project/requests/) : Pour envoyer des requêtes HTTP.
+- [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) (via le package `bs4`) : Pour analyser le contenu HTML.
+
+### Installation
+Installer les dépendances à l'aide de `pip` :
+
+   ```bash
+   pip install requests beautifulsoup4
+
